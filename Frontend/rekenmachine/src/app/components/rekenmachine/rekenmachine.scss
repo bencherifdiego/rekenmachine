@@ -1,0 +1,22 @@
+.calculator-container {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+}
+
+.display-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.result-field {
+  text-align: right;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.operators {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}

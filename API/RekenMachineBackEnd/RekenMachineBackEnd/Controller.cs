@@ -14,8 +14,8 @@ namespace RekenMachineBackEnd
             this.service = service;
         }
 
-        [HttpGet]
-        public ActionResult<string> Get(EquationModel equation)
+        [HttpPost]
+        public ActionResult<string> Get([FromBody] EquationModel equation)
         {
             return Ok(service.ProcessCalculation(equation.equation));
         }

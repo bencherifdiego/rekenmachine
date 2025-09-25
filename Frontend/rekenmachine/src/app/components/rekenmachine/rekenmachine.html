@@ -1,0 +1,27 @@
+<div class="calculator-container">
+  <!-- Display field -->
+  <mat-form-field appearance="outline" class="display-field">
+    <input matInput placeholder="Equation" [(ngModel)]="equation" readonly />
+  </mat-form-field>
+
+  <!-- Numpad -->
+  <mat-grid-list cols="3" rowHeight="80px" gutterSize="10px">
+    <mat-grid-tile *ngFor="let num of ['7','8','9','4','5','6','1','2','3','0','.','=']">
+      <button mat-raised-button color="primary"
+              (click)="num === '=' ? calculate() : addToEquation(num)">
+        {{ num }}
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="warn" (click)="clearEquation()">C</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <!-- Operators -->
+  <div class="operators">
+    <button mat-raised-button color="accent" (click)="addToEquation('+')">+</button>
+    <button mat-raised-button color="accent" (click)="addToEquation('-')">-</button>
+    <button mat-raised-button color="accent" (click)="addToEquation('*')">×</button>
+    <button mat-raised-button color="accent" (click)="addToEquation('/')">÷</button>
+  </div>
+</div>
