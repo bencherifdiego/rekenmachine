@@ -19,8 +19,6 @@ var app = builder.Build();
 
 app.UseCors("AllowAngular");
 
-app.MapGet("/", () => "Hello World!");
-
 app.UseAuthorization();
 app.MapControllers();
 
